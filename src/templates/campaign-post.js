@@ -3,11 +3,13 @@ import Helmet from 'react-helmet'
 import Content, { HTMLContent } from '../components/Content'
 
 export const CampaignPostTemplate = ({
+  helmet,
+  title,
+  poster,
+  vimeo,
+  description,
   content,
   contentComponent,
-  description,
-  title,
-  helmet,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -20,7 +22,6 @@ export const CampaignPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
             <PostContent content={content} />
           </div>
         </div>
@@ -34,11 +35,13 @@ export default props => {
 
   return (
     <CampaignPostTemplate
-      content={post.html}
       contentComponent={HTMLContent}
-      description={post.frontmatter.description}
       helmet={<Helmet title={`Campaign | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
+      poster={post.frontmatter.poster}
+      vimeo={post.frontmatter.vimeo}
+      description={post.frontmatter.description}
+      content={post.html}
     />
   )
 }
@@ -49,8 +52,10 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
+        date(formatString: "MMMM DD, YYYY")
+        poster
+        vimeo
         description
       }
     }

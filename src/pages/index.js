@@ -10,10 +10,10 @@ export default class IndexPage extends React.Component {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            <h1 className="has-text-weight-bold is-size-2">Campaigns</h1>
           </div>
           {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+            .filter(post => post.node.frontmatter.templateKey === 'campaign-post')
             .map(({ node: post }) => (
               <div
                 className="content"
@@ -21,19 +21,16 @@ export default class IndexPage extends React.Component {
                 key={post.id}
               >
                 <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
+                  <a href={post.frontmatter.vimeo}>
+                  <img
+                    style={{ borderRadius: '5px' }}
+                    src={post.frontmatter.poster}
+                    alt={post.frontmatter.title}
+                  />
+                  </a>
+                  <a className="has-text-primary" href={post.frontmatter.vimeo}>
                     {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
+                  </a>
                 </p>
               </div>
             ))}
@@ -48,15 +45,17 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 400)
           id
           fields {
             slug
           }
           frontmatter {
-            title
             templateKey
+            title
             date(formatString: "MMMM DD, YYYY")
+            poster
+            vimeo
+            description
           }
         }
       }
