@@ -1,19 +1,10 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: About
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Electric Owl Creative works hand-in-hand with filmmakers and studios alike to craft captivating visuals geared for today’s content-hungry audiences. The company was forged under the mission that we can do better—that, by combining passion and prowess, we can produce compelling marketing campaigns for films that deserve to be seen.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Founder Greg MacLennan is the former Head of Video and a programmer for the Alamo Drafthouse, where he honed his artistry painstakingly making movie montages that moved people to laughter and tears, while also creating action-packed movie experiences, like CAGED, Denzel Watchingthon, Russellmania, Cruise Control, and The Stallone Zone. With the Drafthouse Films’ purchase of Mood Indigo, Greg jumped at the chance to edit the trailer for Michel Gondry’s heartwarming romance and became the company’s in-house A/V Creative Director. Following his time at Drafthouse Films, Greg worked under Tom Quinn at NEON, also as his A/V Creative Director.  
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+For Drafthouse Films, Greg worked on the following films: The Invitation, Spring, Roar (indiewire.com’s No. 7 best trailer of 2015), and even The Tribe—where, literally, no one speaks a single word!—amongst others. He also edited the theatrical trailer for The Greasy Strangler for Film Rise (Paste magazine’s No. 9 best trailer of 2016). Upon departing Drafthouse Films for NEON, Greg created materials for Colossal, Bad Batch, Beach Rats, and the Oscar-winning I, Tonya. He’s had the pleasure to work closely with several talented directors, such as Nacho Vigalondo, Ana Lily Amirpour, Craig Gillespie, Joshua Oppenheimer, Michel Gondry, and many others.
