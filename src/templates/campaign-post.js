@@ -6,7 +6,7 @@ export const CampaignPostTemplate = ({
   helmet,
   title,
   poster,
-  vimeo,
+  vimeoId,
   description,
   content,
   contentComponent,
@@ -22,7 +22,18 @@ export const CampaignPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <PostContent content={content} />
+            <div className="columns">
+              <div className="column">
+                <img
+                  style={{ borderRadius: '5px' }}
+                  src={poster}
+                  alt={title}
+                />
+              </div>
+              <div className="column">
+                {vimeo}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -39,7 +50,7 @@ export default props => {
       helmet={<Helmet title={`Campaign | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
       poster={post.frontmatter.poster}
-      vimeo={post.frontmatter.vimeo}
+      vimeo={post.frontmatter.vimeoId}
       description={post.frontmatter.description}
       content={post.html}
     />
@@ -55,7 +66,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         poster
-        vimeo
+        vimeoId
         description
       }
     }

@@ -28,7 +28,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Poster", name: "poster", widget: "image"}
-      - {label: "Vimeo URL", name: "vimeo", widget: "string"}
+      - {label: "Vimeo ID", name: "vimeoId", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
 
   - name: "pages"

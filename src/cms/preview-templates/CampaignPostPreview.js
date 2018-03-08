@@ -5,7 +5,7 @@ const CampaignPostPreview = ({ entry, widgetFor }) => (
   <CampaignPostTemplate
     title={entry.getIn(['data', 'title'])}
     poster={entry.getIn(['data', 'poster'])}
-    vimeo={entry.getIn(['data', 'vimeo'])}
+    vimeoId={entry.getIn(['data', 'vimeoId'])}
     description={entry.getIn(['data', 'description'])}
   />
 )

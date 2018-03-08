@@ -11,14 +11,15 @@
     "gatsby-plugin-netlify-cms": "^1.0.9",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sass": "^1.0.17",
-    "gatsby-plugin-sharp": "^1.6.34",
+    "gatsby-plugin-sharp": "^1.6.41",
     "gatsby-remark-images": "^1.5.50",
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.21",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-modal-video": "^1.1.2"
   },
   "keywords": [
     "gatsby"
@@ -34,6 +35,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-plugin-lodash": "^3.3.2",
+    "lodash": "^4.17.5",
     "prettier": "^1.7.4"
   }
 }

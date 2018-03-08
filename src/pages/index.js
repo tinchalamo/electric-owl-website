@@ -1,7 +1,38 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import ModalVideo from 'react-modal-video'
+import '../../node_modules/react-modal-video/scss/modal-video.scss'
 
 export default class IndexPage extends React.Component {
+  constructor () {
+    super();
+
+    this.state = {
+      modal: {
+        open: false,
+        videoId: null
+      }
+    };
+  }
+
+  openModal = videoId => {
+    this.setState({
+      modal: {
+        open: true,
+        videoId
+      }
+    });
+  };
+
+  closeModal = () => {
+    this.setState({
+      modal: {
+        open: false,
+        videoId: null
+      }
+    });
+  };
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -21,14 +52,19 @@ export default class IndexPage extends React.Component {
                 key={post.id}
               >
                 <p>
-                  <a href={post.frontmatter.vimeo}>
-                  <img
-                    style={{ borderRadius: '5px' }}
-                    src={post.frontmatter.poster}
-                    alt={post.frontmatter.title}
+                  <ModalVideo
+                    channel="vimeo"
+                    isOpen={this.state.modal.open}
+                    videoId={post.frontmatter.vimeoId}
+                    onClose={this.closeModal}
                   />
-                  </a>
-                  <a className="has-text-primary" href={post.frontmatter.vimeo}>
+                  
+                  <a onClick={this.openModal}>
+                    <img
+                      style={{ borderRadius: '5px' }}
+                      src={post.frontmatter.poster}
+                      alt={post.frontmatter.title}
+                    />
                     {post.frontmatter.title}
                   </a>
                 </p>
@@ -54,7 +90,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             poster
-            vimeo
+            vimeoId
             description
           }
         }
