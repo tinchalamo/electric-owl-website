@@ -31,7 +31,7 @@ export const CampaignPostTemplate = ({
                 />
               </div>
               <div className="column">
-                {vimeo}
+                {vimeoId}
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default props => {
       helmet={<Helmet title={`Campaign | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
       poster={post.frontmatter.poster}
-      vimeo={post.frontmatter.vimeoId}
+      vimeoId={post.frontmatter.vimeoId}
       description={post.frontmatter.description}
       content={post.html}
     />
