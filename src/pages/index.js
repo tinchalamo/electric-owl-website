@@ -1,10 +1,11 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 import ModalVideo from 'react-modal-video'
 import '../../node_modules/react-modal-video/scss/modal-video.scss'
 
 export default class IndexPage extends React.Component {
-  constructor () {
+  constructor() {
     super();
 
     this.state = {
@@ -43,23 +44,16 @@ export default class IndexPage extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Campaigns</h1>
           </div>
+          <div className="columns is-multiline is-mobile">
           {posts
             .filter(post => post.node.frontmatter.templateKey === 'campaign-post')
             .map(({ node: post }) => (
               <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                className="column is-one-quarter"
                 key={post.id}
               >
-                <p>
-                  <ModalVideo
-                    channel="vimeo"
-                    isOpen={this.state.modal.open}
-                    videoId={post.frontmatter.vimeoId}
-                    onClose={this.closeModal}
-                  />
-                  
-                  <a onClick={this.openModal}>
+                <p>                  
+                  <a href='https://vimeo.com/electricowlcreative'>
                     <img
                       style={{ borderRadius: '5px' }}
                       src={post.frontmatter.poster}
@@ -69,7 +63,14 @@ export default class IndexPage extends React.Component {
                   </a>
                 </p>
               </div>
-            ))}
+          ))}
+          <ModalVideo
+            channel="vimeo"
+            isOpen={this.state.modal.open}
+            videoId={this.state.modal.videoId}
+            onClose={this.closeModal}
+          />
+          </div>
         </div>
       </section>
     )
