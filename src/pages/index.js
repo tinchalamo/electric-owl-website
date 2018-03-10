@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 import ModalVideo from 'react-modal-video'
 
-import Post from '../components/Post'
+import Poster from '../components/Poster'
 import '../../node_modules/react-modal-video/scss/modal-video.scss'
 
 export default class IndexPage extends React.Component {
@@ -54,7 +54,7 @@ export default class IndexPage extends React.Component {
                 className="column is-one-quarter"
                 key={post.id}
               >
-                <Post {...post.frontmatter}  onOpen={this.openModal} />
+                <Poster {...post.frontmatter}  onOpen={this.openModal} />
               </div>
           ))}
           <ModalVideo

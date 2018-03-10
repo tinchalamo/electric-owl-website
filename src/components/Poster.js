@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-class Post extends React.Component {
+class Poster extends React.Component {
   static propTypes = {
     poster: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -31,4 +31,4 @@ class Post extends React.Component {
   }
 }
 
-export default Post
+export default Poster
